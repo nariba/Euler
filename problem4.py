@@ -1,14 +1,12 @@
 #!/usr/local/bin/python3.4
 
-digit = []
+max_product = 0
 
-
-
-for i in range(1, 1000):
-    for j in range(1, 1000):
+for i in range(100, 1000):
+    for j in range(100, 1000):
         product = i * j
-        digit.append(product/10.0)
+        if str(product) == str(product)[::-1]:
+            if max_product < product:
+                max_product = product
 
-digit.pop(3)
-
-print(digit)
+print(max_product)
